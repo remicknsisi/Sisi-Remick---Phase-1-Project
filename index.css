@@ -1,0 +1,9 @@
+.submit {
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    height: 2rem;
+    width: max-content;
+    justify-self: center;
+    margin: 3px;
+  }
