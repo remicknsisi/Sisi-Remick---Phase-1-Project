@@ -7,3 +7,19 @@
     justify-self: center;
     margin: 3px;
   }
+
+.clothing-card {
+    border: pink 2px;
+    text-align: center;
+    background-color: #FCF3CF;
+  }
+
+#title {
+    text-align: center;
+    background-color: #F4D03F;
+  }
+
+#search-bar-container {
+    text-align: center;
+    background-color: #F4D03F;
+  }

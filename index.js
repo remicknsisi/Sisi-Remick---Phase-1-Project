@@ -1,40 +1,32 @@
-let submitBtn = document.getElementsByClassName('submit')
-
 document.addEventListener('submit', handleSubmit)
-// document.addEventListener()
 
 function handleSubmit(e){
     e.preventDefault()
 
-    let searchBar = document.getElementsByClassName('enter-type')
-    let input = searchBar[0].value
-    //should I define these in relation to e.target?
+    let input = e.target.childNodes[1].value
 
     fetch('http://localhost:3000/clothes')
     .then(response => response.json())
-    .then(arrayOfObj =>
-        arrayOfObj.map(obj => {
-            obj.type === input
-            return renderClothing.call(obj)
-            }
-        )
+    .then(arrayOfObj => arrayOfObj.map(obj => {
+        if(obj.type === input){
+            renderClothing.call(obj)
+            } 
+            // else alert(`Nothing in stock for ${input}!`)
+        })
     )
 }
 
-document.addEventListener('DOMContentLoadad', renderClothing)
-let clothingContainer = document.getElementById('container')
+// document.addEventListener('DOMContentLoadad', renderClothing)
 
 function renderClothing(){
-    fetch('http://localhost:3000/clothes')
-    .then(response => response.json())
-    .then(arrayOfClothing => {
-        for (i = 0; i < arrayOfClothing.length; i++){
+    let clothingContainer = document.getElementById('container')
+
             let clothingCard = document.createElement('div')
-            //can set class names here to set styling later in CSS file
+            clothingCard.className = "clothing-card"
             let price = document.createElement('p')
-            price.innerText = arrayOfClothing[i].price
+            price.innerText = this.price
             let image = document.createElement('img')
-            image.src = arrayOfClothing[i].image
+            image.src = this.image
             let addToCart = document.createElement('button')
             addToCart.innerText = 'Add to Cart'
             addToCart.addEventListener('click', handleAddToCart)
@@ -43,10 +35,10 @@ function renderClothing(){
 
             clothingContainer.appendChild(clothingCard)
         }
-    }
-  )
-}
+
 
 function handleAddToCart(){
+    alert("Item Added to Cart!")
+
 
 }
