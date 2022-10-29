@@ -6,20 +6,46 @@
     width: max-content;
     justify-self: center;
     margin: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
 .clothing-card {
     border: pink 2px;
     text-align: center;
     background-color: #FCF3CF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
 #title {
     text-align: center;
     background-color: #F4D03F;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
 
 #search-bar-container {
     text-align: center;
     background-color: #F4D03F;
   }
+
+#cart {
+    text-align: center;
+    background-color: #F4D03F;
+  }
+
+.image{
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .addBtn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #FFCB3D;
+  }
+
+html {
+    background-color: #FCF3CF;
+}
