@@ -25,25 +25,76 @@ function renderClothing(){
             let image = document.createElement('img')
             image.src = this.image
             image.className = "image"
+            let name = document.createElement('p')
+            name.innerText = this.name
             let addToCart = document.createElement('button')
             addToCart.innerText = 'Add to Cart'
             addToCart.className = "addBtn"
             addToCart.addEventListener('click', handleAddToCart)
+            // addToCart.addEventListener('mouseover', handleMouseover)
             
-            clothingCard.append(image, price, addToCart)
+            clothingCard.append(image, name, price, addToCart)
 
             clothingContainer.appendChild(clothingCard)
         }
 
+//initialization of my cart
+let cart = document.getElementById('cart')
+let cartCard = document.createElement('div')
+cartCard.className = "cart-card"
+let title = document.createElement('h4')
+title.innerText = "My Cart"
+let total = document.createElement('p')
+total.innerText = `Total: `
 
-function handleAddToCart(){
+cartCard.append(title, total)
+cart.appendChild(cartCard)
+
+
+function handleAddToCart(e){
     alert("Item Added to Cart!")
 
-    let cart = document.getElementById('cart')
-    let numberOfItems = document.createElement('p')
-    numberOfItems.innerText = //counter here 
+    let cartTable = document.createElement('table')
 
-    cart.appendChild()
+    let item = document.createElement('td')
+    item.innerText = e.target.parentNode.childNodes[1].innerText
+
+    let itemPrice = document.createElement('td')
+    itemPrice.innerText = e.target.parentNode.childNodes[2].innerText
+
+    let removeButton = document.createElement('button')
+    removeButton.innerText = "x"
+    removeButton.addEventListener('click', handleRemoval)
+
+    cartTable.append(item, itemPrice, removeButton)
+
+    cartCard.append(cartTable)
 }
 
-//add a clear all button to remove elements from dom that are currently there - all child nodes of the container
+function handleRemoval(e){
+    e.target.parentNode.remove()
+}
+
+function calculateTotal(){
+    //dynamic listener here to update total within the cart to calculate for what is currently inside of it
+}
+
+// function handleMouseover(e){
+//     e.target.innerHTML = `
+//     <strong>
+//         ${e.target.innerText}
+//     </strong>`
+//     //how do I unbold when scroll away?
+// }
+
+// let clearAll = document.createElement('button')
+// clearAll.innerText = "Clear All"
+// clearAll.className = "btn"
+// let submitContainer = document.getElementById('search-bar-container')
+// submitContainer.appendChild(clearAll)
+// document.addEventListener('click', handleClearAll)
+
+// function handleClearAll(){
+//     let container = document.getElementsByClassName('clothing-card')
+//     container.map(item => item.remove())
+// }

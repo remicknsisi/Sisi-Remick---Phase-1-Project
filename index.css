@@ -10,7 +10,6 @@
   }
 
 .clothing-card {
-    border: pink 2px;
     text-align: center;
     background-color: #FCF3CF;
     padding-top: 10px;
@@ -49,3 +48,18 @@
 html {
     background-color: #FCF3CF;
 }
+
+.cart-card {
+    background-color: #FFBB33;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 200px;
+    width: 150px;
+    float: right;
+    font-size: x-small;
+    padding-right: 5px;
+  }
+
+  #container {
+    text-align: center;
+
+  }
