@@ -31,7 +31,8 @@ function renderClothing(){
             addToCart.innerText = 'Add to Cart'
             addToCart.className = "addBtn"
             addToCart.addEventListener('click', handleAddToCart)
-            // addToCart.addEventListener('mouseover', handleMouseover)
+            addToCart.addEventListener('mouseenter', handleMouseEnter)
+            addToCart.addEventListener('mouseout', handleMouseLeave)
             
             clothingCard.append(image, name, price, addToCart)
 
@@ -75,7 +76,7 @@ function handleRemoval(e){
     e.target.parentNode.remove()
 }
 
-//setup of 'Clear All' button functionality
+//setup of 'Clear All' button and functionality
 let clearAll = document.getElementById('clear-search').childNodes[1]
 clearAll.addEventListener('click', handleClearAll)
 
@@ -83,22 +84,10 @@ function handleClearAll(){
     let container = document.getElementById('container')
     container.innerHTML = ''
 }
-// function handleMouseover(e){
-//     e.target.innerHTML = `
-//     <strong>
-//         ${e.target.innerText}
-//     </strong>`
-//     //how do I unbold when scroll away?
-// }
+function handleMouseEnter(){
+        this.style.backgroundColor = 'orange'
+}
 
-// let clearAll = document.createElement('button')
-// clearAll.innerText = "Clear All"
-// clearAll.className = "btn"
-// let submitContainer = document.getElementById('search-bar-container')
-// submitContainer.appendChild(clearAll)
-// document.addEventListener('click', handleClearAll)
-
-// function handleClearAll(){
-//     let container = document.getElementsByClassName('clothing-card')
-//     container.map(item => item.remove())
-// }
+function handleMouseLeave(){
+    this.style.backgroundColor = null
+}
