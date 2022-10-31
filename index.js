@@ -75,10 +75,14 @@ function handleRemoval(e){
     e.target.parentNode.remove()
 }
 
-function calculateTotal(){
-    //dynamic listener here to update total within the cart to calculate for what is currently inside of it
-}
+//setup of 'Clear All' button functionality
+let clearAll = document.getElementById('clear-search').childNodes[1]
+clearAll.addEventListener('click', handleClearAll)
 
+function handleClearAll(){
+    let container = document.getElementById('container')
+    container.innerHTML = ''
+}
 // function handleMouseover(e){
 //     e.target.innerHTML = `
 //     <strong>
