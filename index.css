@@ -21,6 +21,7 @@
     text-align: center;
     background-color: #F4D03F;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 50px;
   }
 
 #search-bar-container {
@@ -52,7 +53,7 @@ html {
 .cart-card {
     background-color: #FFBB33;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 200px;
+    height: auto;
     width: 150px;
     float: right;
     font-size: x-small;
@@ -63,3 +64,13 @@ html {
     text-align: center;
 
   }
+
+#clear-search {
+        background-color: white;
+        border-radius: 5px;
+        height: 2rem;
+        width: max-content;
+        justify-self: center;
+        margin: 3px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

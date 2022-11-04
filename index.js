@@ -13,6 +13,8 @@ function handleSubmit(e){
             } 
         })
     )
+    //I want to alert('Not in Stock') if there is no match in the database
+    //find a way to use filter here in addition to map --> THEN use map or foreach to render clothing for each 
 }
 
 function renderClothing(){
@@ -39,33 +41,43 @@ function renderClothing(){
             clothingContainer.appendChild(clothingCard)
         }
 
-//initialization of my cart
+//initialization of my cart on the DOM
 let cart = document.getElementById('cart')
 let cartCard = document.createElement('div')
 cartCard.className = "cart-card"
 let title = document.createElement('h4')
 title.innerText = "My Cart"
-let total = document.createElement('p')
-total.innerText = `Total: `
+let totalInCart = document.createElement('p')
+totalInCart.innerText = `Total: 0`
+//use const where you can
 
-cartCard.append(title, total)
+cartCard.append(title, totalInCart)
 cart.appendChild(cartCard)
 
 
 function handleAddToCart(e){
     alert("Item Added to Cart!")
 
+    //rename some of these variables more intuitively
+
     let cartTable = document.createElement('table')
 
-    let item = document.createElement('td')
+    const item = document.createElement('td')
     item.innerText = e.target.parentNode.childNodes[1].innerText
 
-    let itemPrice = document.createElement('td')
-    itemPrice.innerText = e.target.parentNode.childNodes[2].innerText
+    const itemPrice = document.createElement('td')
+    itemPrice.className = 'item-price'
+    const priceOfItem =e.target.parentNode.childNodes[2].innerText
+
+    itemPrice.innerText = priceOfItem
 
     let removeButton = document.createElement('button')
     removeButton.innerText = "x"
     removeButton.addEventListener('click', handleRemoval)
+
+    let currentCartTotal = parseInt(totalInCart.innerText.split(' ')[1])
+    let newCartTotal = currentCartTotal + priceOfItem.split('$').slice(1).join()*1
+    totalInCart.innerText = `Total: ${newCartTotal}`
 
     cartTable.append(item, itemPrice, removeButton)
 
@@ -74,16 +86,24 @@ function handleAddToCart(e){
 
 function handleRemoval(e){
     e.target.parentNode.remove()
+
+    let additionToCart = parseInt(e.target.parentNode.childNodes[1].innerText.split('$')[1])
+
+    let currentCartTotal = parseInt(totalInCart.innerText.split(' ')[1])
+    let newCartTotal = currentCartTotal - additionToCart
+    totalInCart.innerText = `Total: ${newCartTotal}`
 }
 
 //setup of 'Clear All' button and functionality
-let clearAll = document.getElementById('clear-search').childNodes[1]
+let clearAll = document.getElementById('clear-search')
 clearAll.addEventListener('click', handleClearAll)
 
 function handleClearAll(){
     let container = document.getElementById('container')
     container.innerHTML = ''
 }
+
+//mouseover events
 function handleMouseEnter(){
         this.style.backgroundColor = 'orange'
 }
@@ -91,3 +111,5 @@ function handleMouseEnter(){
 function handleMouseLeave(){
     this.style.backgroundColor = null
 }
+
+//how do I credit sources for the pictures?
