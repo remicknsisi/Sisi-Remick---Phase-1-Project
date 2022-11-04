@@ -48,7 +48,7 @@ cartCard.className = "cart-card"
 let title = document.createElement('h4')
 title.innerText = "My Cart"
 let totalInCart = document.createElement('p')
-totalInCart.innerText = `Total: 0`
+totalInCart.innerText = `Total: $0`
 //use const where you can
 
 cartCard.append(title, totalInCart)
@@ -68,16 +68,17 @@ function handleAddToCart(e){
     const itemPrice = document.createElement('td')
     itemPrice.className = 'item-price'
     const priceOfItem =e.target.parentNode.childNodes[2].innerText
-
     itemPrice.innerText = priceOfItem
 
     let removeButton = document.createElement('button')
     removeButton.innerText = "x"
     removeButton.addEventListener('click', handleRemoval)
 
-    let currentCartTotal = parseInt(totalInCart.innerText.split(' ')[1])
-    let newCartTotal = currentCartTotal + priceOfItem.split('$').slice(1).join()*1
-    totalInCart.innerText = `Total: ${newCartTotal}`
+    let currentCartTotal = parseInt(totalInCart.innerText.split('$')[1])
+    let newItemPrice = parseInt(priceOfItem.split('$')[1])
+    
+    let newCartTotal = currentCartTotal + newItemPrice
+    totalInCart.innerText = `Total: $${newCartTotal}`
 
     cartTable.append(item, itemPrice, removeButton)
 
@@ -85,13 +86,13 @@ function handleAddToCart(e){
 }
 
 function handleRemoval(e){
-    e.target.parentNode.remove()
-
     let additionToCart = parseInt(e.target.parentNode.childNodes[1].innerText.split('$')[1])
 
-    let currentCartTotal = parseInt(totalInCart.innerText.split(' ')[1])
+    let currentCartTotal = parseInt(totalInCart.innerText.split('$')[1])
     let newCartTotal = currentCartTotal - additionToCart
-    totalInCart.innerText = `Total: ${newCartTotal}`
+    totalInCart.innerText = `Total: $${newCartTotal}`
+
+    e.target.parentNode.remove()
 }
 
 //setup of 'Clear All' button and functionality
