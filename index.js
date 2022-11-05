@@ -3,7 +3,7 @@ document.addEventListener('submit', handleSubmit)
 function handleSubmit(e){
     e.preventDefault()
 
-    let input = e.target.childNodes[1].value
+    const input = e.target.childNodes[1].value
 
     fetch('http://localhost:3000/clothes')
     .then(response => response.json())
@@ -18,18 +18,18 @@ function handleSubmit(e){
 }
 
 function renderClothing(){
-    let clothingContainer = document.getElementById('container')
+    const clothingContainer = document.getElementById('container')
 
-            let clothingCard = document.createElement('div')
+            const clothingCard = document.createElement('div')
             clothingCard.className = "clothing-card"
-            let price = document.createElement('p')
+            const price = document.createElement('p')
             price.innerText = this.price
-            let image = document.createElement('img')
+            const image = document.createElement('img')
             image.src = this.image
             image.className = "image"
-            let name = document.createElement('p')
+            const name = document.createElement('p')
             name.innerText = this.name
-            let addToCart = document.createElement('button')
+            const addToCart = document.createElement('button')
             addToCart.innerText = 'Add to Cart'
             addToCart.className = "addBtn"
             addToCart.addEventListener('click', handleAddToCart)
@@ -42,65 +42,63 @@ function renderClothing(){
         }
 
 //initialization of my cart on the DOM
-let cart = document.getElementById('cart')
-let cartCard = document.createElement('div')
+const cart = document.getElementById('cart')
+const cartCard = document.createElement('div')
 cartCard.className = "cart-card"
-let title = document.createElement('h4')
+const title = document.createElement('h4')
 title.innerText = "My Cart"
-let totalInCart = document.createElement('p')
-totalInCart.innerText = `Total: $0`
-//use const where you can
+const cartValue = document.createElement('p')
+cartValue.innerText = `Total: $0`
 
-cartCard.append(title, totalInCart)
+cartCard.append(title, cartValue)
 cart.appendChild(cartCard)
 
 
 function handleAddToCart(e){
     alert("Item Added to Cart!")
 
-    //rename some of these variables more intuitively
+    const cartTable = document.createElement('table')
 
-    let cartTable = document.createElement('table')
+    const product = document.createElement('td')
+    const productName = e.target.parentNode.childNodes[1].innerText
+    product.innerText = productName
 
-    const item = document.createElement('td')
-    item.innerText = e.target.parentNode.childNodes[1].innerText
+    const price = document.createElement('td')
+    price.className = 'item-price'
+    const productPrice = e.target.parentNode.childNodes[2].innerText
+    price.innerText = productPrice
 
-    const itemPrice = document.createElement('td')
-    itemPrice.className = 'item-price'
-    const priceOfItem =e.target.parentNode.childNodes[2].innerText
-    itemPrice.innerText = priceOfItem
-
-    let removeButton = document.createElement('button')
+    const removeButton = document.createElement('button')
     removeButton.innerText = "x"
     removeButton.addEventListener('click', handleRemoval)
 
-    let currentCartTotal = parseInt(totalInCart.innerText.split('$')[1])
-    let newItemPrice = parseInt(priceOfItem.split('$')[1])
+    const currentCartTotal = parseInt(cartValue.innerText.split('$')[1])
+    const newProductPrice = parseInt(productPrice.split('$')[1])
     
-    let newCartTotal = currentCartTotal + newItemPrice
-    totalInCart.innerText = `Total: $${newCartTotal}`
+    const newCartTotal = currentCartTotal + newProductPrice
+    cartValue.innerText = `Total: $${newCartTotal}`
 
-    cartTable.append(item, itemPrice, removeButton)
+    cartTable.append(product, price, removeButton)
 
     cartCard.append(cartTable)
 }
 
 function handleRemoval(e){
-    let additionToCart = parseInt(e.target.parentNode.childNodes[1].innerText.split('$')[1])
+    const additionToCartTotal = parseInt(e.target.parentNode.childNodes[1].innerText.split('$')[1])
+    const cartTotal = parseInt(cartValue.innerText.split('$')[1])
 
-    let currentCartTotal = parseInt(totalInCart.innerText.split('$')[1])
-    let newCartTotal = currentCartTotal - additionToCart
-    totalInCart.innerText = `Total: $${newCartTotal}`
+    const updatedCartTotal = cartTotal - additionToCartTotal
+    cartValue.innerText = `Total: $${updatedCartTotal}`
 
     e.target.parentNode.remove()
 }
 
 //setup of 'Clear All' button and functionality
-let clearAll = document.getElementById('clear-search')
+const clearAll = document.getElementById('clear-search')
 clearAll.addEventListener('click', handleClearAll)
 
 function handleClearAll(){
-    let container = document.getElementById('container')
+    const container = document.getElementById('container')
     container.innerHTML = ''
 }
 

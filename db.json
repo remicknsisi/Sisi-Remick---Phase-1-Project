@@ -4,51 +4,61 @@
       "type": "tops",
       "image": "https://images.urbndata.com/is/image/Anthropologie/4113086690097_070_b?$redesign-zoom-5x$",
       "name": "The Alani Cashmere Mock-Neck Sweater",
-      "price": "$180"},
+      "price": "$180"
+      },
       { "id": 2,
       "type": "tops",
       "image": "https://images.urbndata.com/is/image/Anthropologie/4113529100129_011_b?$redesign-zoom-5x$",
       "name": "Maeve Scoop Neck Eyelash Sweater Tee",
-      "price": "$98"},
+      "price": "$98"
+      },
       { "id": 3,
       "type": "pants",
       "image": "https://images.urbndata.com/is/image/Anthropologie/4123650590142_101_b?$redesign-zoom-5x$",
       "name": "Maeve The Colette Cropped Wide-Leg Corduroy Pants",
-      "price": "$138"},
+      "price": "$138"
+      },
       { "id": 4,
       "type": "pants",
       "image": "https://images.urbndata.com/is/image/Anthropologie/4123583310007_001_b15?$redesign-zoom-5x$",
       "name": "The Colette Faux Leather Pants",
-      "price": "$148"},
+      "price": "$148"
+      },
       { "id": 5,
       "type": "hat",
       "image": "https://images.urbndata.com/is/image/Anthropologie/78273695_001_b?$redesign-zoom-5x$",
       "name": "Wyeth Boater",
-      "price": "$110"},
+      "price": "$110"
+      },
       { "id": 6,
       "type": "hat",
       "image": "https://images.urbndata.com/is/image/Anthropologie/78885068_011_b?$redesign-zoom-5x$",
       "name": "Ruffle Knit Beret",
-      "price": "$38"},
+      "price": "$38"
+      },
       { "id": 7,
       "type": "dress",
       "image": "https://images.urbndata.com/is/image/Anthropologie/4130347470024_030_b?$a15-pdp-detail-shot$&fit=constrain&qlt=80&wid=640",
       "name": "Sweetheart Bodice Midi Dress",
-      "price": "$80"},
+      "price": "$80"
+      },
       { "id": 8,
       "type": "dress",
       "image": "https://images.urbndata.com/is/image/Anthropologie/4130265640011_001_b?$redesign-zoom-5x$",
       "name": "Maeve Ribbed Cutout Dress",
-      "price": "$160"},
+      "price": "$160"
+      },
       { "id": 9,
       "type": "shoes",
       "image": "https://images.urbndata.com/is/image/Anthropologie/76121425_024_b14?$redesign-zoom-5x$",
       "name": "Bibi Lou Valencia Patent Leather Heels",
-      "price": "$165"},
+      "price": "$165"
+      },
       { "id": 10,
       "type": "shoes",
       "image": "https://images.urbndata.com/is/image/Anthropologie/76094200_034_b2?$redesign-zoom-5x$",
       "name": "Jeffrey Campbell Jerema Boots",
-      "price": "$175"}
+      "price": "$175"
+      }
     ]
 }
