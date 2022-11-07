@@ -7,14 +7,13 @@ function handleSubmit(e){
 
     fetch('http://localhost:3000/clothes')
     .then(response => response.json())
-    .then(arrayOfObj => arrayOfObj.map(obj => {
+    .then(arrayOfObj => arrayOfObj.filter(function(obj){
         if(obj.type === input){
-            renderClothing.call(obj)
-            } 
+        return obj}
         })
     )
-    //I want to alert('Not in Stock') if there is no match in the database
-    //find a way to use filter here in addition to map --> THEN use map or foreach to render clothing for each 
+    .then(newOutput => newOutput.forEach(output => renderClothing.call(output)))
+    //I want to alert('Not in Stock') if there is no match in the database - filter may solve this
 }
 
 function renderClothing(){
@@ -53,7 +52,7 @@ cartValue.innerText = `Total: $0`
 cartCard.append(title, cartValue)
 cart.appendChild(cartCard)
 
-
+//cart add & remove functionality
 function handleAddToCart(e){
     alert("Item Added to Cart!")
 
@@ -110,5 +109,3 @@ function handleMouseEnter(){
 function handleMouseLeave(){
     this.style.backgroundColor = null
 }
-
-//how do I credit sources for the pictures?
