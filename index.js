@@ -12,8 +12,7 @@ function handleSubmit(e){
         return obj}
         })
     )
-    .then(newOutput => newOutput.forEach(output => renderClothing.call(output)))
-    //I want to alert('Not in Stock') if there is no match in the database - filter may solve this
+    .then(foundObjs => foundObjs.forEach(foundObj => renderClothing.call(foundObj)))
 }
 
 function renderClothing(){
