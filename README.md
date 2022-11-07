@@ -8,8 +8,6 @@ The application contains the functionality to "add to cart" and display those pr
 
 Currently, the only products stored in my db.json server are from one of my personal favorite stores - *Anthropologie* (thank you for the product images, prices, and names Anthropologie.com!). But imagine how this application might be expanded upon beyond hitting the minimum project requirements of Phase 1 of the Flatiron Program?
 
-While searching for the perfect dress for an upcoming occasion, I wish I could search *Anthropologie*, *Madewell*, and *Urban Outfitters* all at the same time. I could implement additional properties to the objects in my server that define products by store, style, price, and gender. Filters could be added to the DOM that account for all of these functionalities and make the application useful for all parties.
+While searching for the perfect dress for an upcoming occasion, I wish I could search *Anthropologie*, *Madewell*, and *Urban Outfitters* all at the same time. I could implement additional properties to the objects in my server that define products by store, style, price, and gender. Filters could be added to the DOM that account for all of these functionalities and make the application useful for all parties to shop their favorite stores at once.
 
-// need a close - discoutns? lend credit to anthro
-
-Happy shopping!
+I hope you enjoy my application, and happy shopping!
