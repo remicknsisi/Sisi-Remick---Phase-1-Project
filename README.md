@@ -6,6 +6,10 @@ By utilizing the submit form that is center stage of the DOM, provide an input d
 
 The application contains the functionality to "add to cart" and display those products and prices visually on the webpage. The shopping cart also contains sum total functionality so that you may keep an eye on the total value of the items in your cart.
 
-Currently, the only products stored in my db.json server
+Currently, the only products stored in my db.json server are from one of my personal favorite stores - *Anthropologie*. But imagine how this application might be expanded upon beyond hitting the minimum project requirements of Phase 1 of the Flatiron Program?
 
-Imagine how this application could be improved upon, and what efatures could be added? Filter functionalties that control style preferences, stores, price, gender, and an expaned database. 
+While searching for the perfect dress for an upcoming occasion, I wish I could search *Anthropologie*, *Madewell*, and *Urban Outfitters* all at the same time. I could implement additional properties to the objects in my server that define products by store, style, price, and gender. Filters could be added to the DOM that account for all of these functionalities.
+
+// need a close
+
+Happy shopping!
