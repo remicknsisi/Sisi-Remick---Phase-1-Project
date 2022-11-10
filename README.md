@@ -11,8 +11,3 @@ Currently, the only products stored in my db.json server are from one of my pers
 While searching for the perfect dress for an upcoming occasion, I wish I could search *Anthropologie*, *Madewell*, and *Urban Outfitters* all at the same time. I could implement additional properties to the objects in my server that define products by store, style, price, and gender. Filters could be added to the DOM that account for all of these functionalities and make the application useful for all parties to shop their favorite stores at once.
 
 I hope you enjoy my application, and happy shopping!
-<<<<<<< HEAD
-=======
-
-![](https://github.com/remicknsisi/Sisi-Remick---Phase-1-Project/blob/main/Project_Gift_AdobeExpress.gif)
->>>>>>> c4dd7bbb5761757a8e320b0facd364e2d658fcf7
