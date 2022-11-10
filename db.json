@@ -59,6 +59,18 @@
       "image": "https://images.urbndata.com/is/image/Anthropologie/76094200_034_b2?$redesign-zoom-5x$",
       "name": "Jeffrey Campbell Jerema Boots",
       "price": "$175"
+      },
+      { "id": 11,
+      "type": "skirt",
+      "image": "https://images.urbndata.com/is/image/Anthropologie/4120638280131_009_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080",
+      "name": "Farm x Anthropologie Fringed Wrap Skirt",
+      "price": "$185"
+      },
+      { "id": 12,
+      "type": "skirt",
+      "image": "https://images.urbndata.com/is/image/Anthropologie/4120583310010_066_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080",
+      "name": "Maeve Faux Leather Midi Skirt",
+      "price": "$130"
       }
     ]
 }
