@@ -1,3 +1,4 @@
+//setting up submit functionality
 document.addEventListener('submit', handleSubmit)
 
 function handleSubmit(e){
