@@ -83,10 +83,10 @@ function handleAddToCart(e){
 }
 
 function handleRemoval(e){
-    const additionToCartTotal = parseInt(e.target.parentNode.childNodes[1].innerText.split('$')[1])
+    const subtractFromCartTotal = parseInt(e.target.parentNode.childNodes[1].innerText.split('$')[1])
     const cartTotal = parseInt(cartValue.innerText.split('$')[1])
 
-    const updatedCartTotal = cartTotal - additionToCartTotal
+    const updatedCartTotal = cartTotal - subtractFromCartTotal
     cartValue.innerText = `Total: $${updatedCartTotal}`
 
     e.target.parentNode.remove()
